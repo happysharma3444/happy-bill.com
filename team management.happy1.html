@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,400;1,500&family=Roboto:ital,wght@1,100&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css">
+    <title>About</title>
+    <style>
+        body {
+            background-image: url(https://img.lovepik.com/background/20211022/large/lovepik-blue-business-background-image_401948703.jpg);
+            opacity: 0.9;
+        }
+
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .navbar-nav a {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 18px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .navbar-nav a:hover {
+            background-color: aqua;
+        }
+
+        .navbar-light .navbar-brand {
+            color: #fff;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .navbar-light .navbar-nav .nav-link {
+            color: #fff;
+        }
+
+        .navbar-nav {
+            text-align: center;
+        }
+
+        .nav-link {
+            padding: 0.2rem 1rem;
+        }
+
+        .w-100 {
+            height: 100vh;
+        }
+
+        @media only screen and (max-width: 767px) {
+            .navbar-nav.ml-auto {
+                background: rgba(0, 0, 0, 0.5);
+            }
+        }
+
+        .container {
+            max-width: 1170px;
+            margin: auto;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .footer {
+            background-color: #24262b;
+            padding: 70px 0;
+        }
+
+        .footer-col {
+            width: 25%;
+            padding: 0 15px;
+        }
+
+        .footer-col h4 {
+            font-size: 18px;
+            color: #ffffff;
+            text-transform: capitalize;
+            margin-bottom: 35px;
+            position: relative;
+        }
+
+        .footer-col h4::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            background-color: #e91e63;
+            height: 2px;
+            box-sizing: border-box;
+            width: 50px;
+        }
+
+        .footer-col ul li:not(:last-child) {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            font-size: 16px;
+            text-transform: capitalize;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 300;
+            color: #bbbbbb;
+            display: block;
+            transition: all 0.3s ease;
+        }
+
+        .footer-col ul li a:hover {
+            color: #ffffff;
+            padding-left: 8px;
+        }
+
+        .footer-col .social-links a {
+            display: inline-block;
+            height: 40px;
+            width: 40px;
+            background-color: rgba(255, 255, 255, 0.2);
+            margin: 0 10px 10px 0;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 50%;
+            color: #ffffff;
+            transition: all 0.5s ease;
+        }
+
+        .footer-col .social-links a:hover {
+            color: #24262b;
+            background-color: #ffffff;
+        }
+
+        @media (max-width: 767px) {
+            .footer-col {
+                width: 50%;
+                margin-bottom: 30px;
+            }
+        }
+
+        @media (max-width: 574px) {
+            .footer-col {
+                width: 100%;
+            }
+        }
+
+        footer {
+            background: #111;
+            height: auto;
+            width: 100vw;
+            font-family: "Open Sans";
+            padding-top: 40px;
+            color: #fff;
+        }
+
+        .footer-bottom {
+            background: #000;
+            width: 100vw;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer-bottom p {
+            font-size: 14px;
+            word-spacing: 2px;
+            text-transform: capitalize;
+        }
+
+        .footer-bottom span {
+            text-transform: uppercase;
+            opacity: .4;
+            font-weight: 200;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="logo"><img src="https://pakkabill.com/wowsa45k24/wp-content/uploads/2021/01/image001.png" width="200px"
+            alt="logo"></div>
+    <div class="flex justify-center  p-4">
+        <div class="flex flex-col justify-center items-center ">
+            <div class="text-stone-600  font-medium"></div>
+            <div class="text-green-500 text-3xl md:text-5xl font-medium"
+                style="color: red;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                What Makes BW 3.0 Different</div>
+            <div class="text-stone-600 my-4 md:font-medium text-center w-3/4 md:w-1/2"
+                style="color: black; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: black;"> Lorem
+                ipsum dolor sit amet consectetur adipisicing elit. Repudiandae corrupti natus excepturi sequi esse!
+                Porro, eveniet sequi quis perspiciatis, a eaque doloribus, et officia eius aperiam consequuntur
+                expedita. In, aut.</div>
+            <div class="flex flex-col md:flex-row max-w-7xl justify-center items-center ">
+
+                <div class="overflow-hidden w-full m-4 flex justify-center rounded-lg  md:w-[33%] px-8">
+
+                    <div class="flex flex-col md:flex-row items-center justify-center  ">
+                        <div class="  items-center justify-center flex py-2">
+                            <div class="flex flex-col  items-center justify-center text-center" style="border: 4px solid red;">
+                                <img src="https://source.unsplash.com/100x100/?man,boy" alt="" class="rounded-full" />
+                                <div class="text-stone-500  m-2"
+                                    style="font-family:  'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;color: black;">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, nemo incidunt
+                                    repudita dolores cum inventore laudantium porro. Sit alias quasi amet porro adipisci
+                                    enim voluptatum officiis sapiente.</div>
+                                <div class="font-bold text-green-500" style="color: rgba(212, 23, 23, 0.884); font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"> <b> John Doe</b></div>
+                                <div class="text-sm font-medium text-stone-500 hover:text-green-500"><a href="#"> <b>
+                                            Board
+                                            Director</b> </a></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="overflow-hidden w-full m-4 flex justify-center rounded-lg  md:w-[33%] px-8">
+
+                    <div class="flex flex-col md:flex-row items-center justify-center  ">
+                        <div class="  items-center justify-center flex py-2">
+                            <div class="flex flex-col  items-center justify-center text-center" style="border: 4px solid red;">
+                                <img src="https://source.unsplash.com/100x100/?girl" alt="" class="rounded-full" />
+                                <div class="text-stone-500  m-2"
+                                    style="font-family:  'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;color: black;">
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor ipsa provident natus
+                                    velit deleniti exercitationem a officia unde labore, sit tempore quam reiciendis
+                                    reprehenderit nobis sed accusamus qui aliquam consequatur.</div>
+                                <div class="font-bold text-green-500" style="color: red;"> <b> Emily Watson</b></div>
+                                <div class="text-sm font-medium text-stone-500 hover:text-green-500"><a href="#"> <b>
+                                            Secretary</b></a></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="overflow-hidden w-full m-4 flex justify-center rounded-lg  md:w-[33%] px-8">
+
+                    <div class="flex flex-col md:flex-row items-center justify-center  ">
+                        <div class="  items-center justify-center flex py-2">
+                            <div class="flex flex-col  items-center justify-center text-center" style="border: 4px solid red;">
+                                <img src="https://source.unsplash.com/100x100/?boy" alt="" class="rounded-full" />
+                                <div class="text-stone-500  m-2"
+                                    style="font-family:  'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;color: black;">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum fugit, excepturi
+                                    eaque ex rem quos earum! Maiores, animi sunt ab numquam nesciunt modi commodi
+                                    obcaecati laborum dolore quidem doloremque veniam.</div>
+                                <div class="font-bold text-green-500" style="color: red;"> <b> Paul Wesley</b> </div>
+                                <div class="text-sm font-medium text-stone-500 hover:text-green-500"><a href="#"> <b>
+                                            Sales
+                                            Manager </b></a></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <br>
+    <div>
+        <div class="bg-gray-700 p-3 space-y-10 md:grid grid-cols-2 md:-mt-6 lg:grid-cols-4">
+            <div class="w-1/2 md:ml-24 md:mt-9 md:w-3/4">
+                <h1 class="text-orange-400 text-xl font-medium">Company</h1> <br />
+                <p class="text-gray-300/80 text-base hover:text-yellow-300 cursor-none"> A123 Lost Street <br /> Chandigarh,
+                    PB 535022 <br /> India </p> <br />
+                <p class="text-gray-200/80 text-base hover:text-yellow-300 cursor-pointer"> <strong
+                        class="tracking-wide text-orange-400 font-normal">Phone:</strong> +91 7008090111 </p>
+                <p class="text-gray-200/80 text-base hover:text-yellow-300 cursor-pointer"> <strong
+                        class="tracking-wide text-orange-400 font-normal">Email:</strong> info@gmail.com </p>
+            </div>
+            <div class="leading-9 md:w-2/4 md:order-3 md:ml-24">
+                <h1 class="text-orange-400 text-xl font-medium tracking-[0.030rem]"> Useful Links </h1>
+                <ul class="mt-2 text-gray-300/80">
+                    <li> <i class="fa fa-chevron-right text-orange-400"></i> <a href="pakkabill.html" class="hover:text-yellow-300">
+                            Home</a> </li>
+                    <li> <i class="fa fa-chevron-right text-orange-400"></i> <a href="#" class="hover:text-yellow-300">
+                            About Us</a> </li>
+                    <li> <i class="fa fa-chevron-right text-orange-400"></i> <a href="#" class="hover:text-yellow-300">
+                            Services</a> </li>
+                    <li> <i class="fa fa-chevron-right text-orange-400"></i> <a href="#" class="hover:text-yellow-300">
+                            Terms of service</a> </li>
+                    <li> <i class="fa fa-chevron-right text-orange-400"></i> <a href="#" class="hover:text-yellow-300">
+                            Privacy policy</a> </li>
+                </ul>
+            </div>
+            <div class="leading-9 md:w-3/4 md:order-4">
+                <h1 class="text-orange-400 text-xl font-medium tracking-[0.030rem]"> Our Services </h1>
+                <ul class="mt-2 text-gray-300/80">
+                    <li> <i class="fa fa-chevron-right text-orange-400"></i> <a href="#" class="hover:text-yellow-300"> Web
+                            Design</a> </li>
+                    <li> <i class="fa fa-chevron-right text-orange-400"></i> <a href="#" class="hover:text-yellow-300"> Web
+                            Development</a> </li>
+                    <li> <i class="fa fa-chevron-right text-orange-400"></i> <a href="#" class="hover:text-yellow-300">
+                            Product Management</a> </li>
+                    <li> <i class="fa fa-chevron-right text-orange-400"></i> <a href="#" class="hover:text-yellow-300">
+                            Marketing</a> </li>
+                    <li> <i class="fa fa-chevron-right text-orange-400"></i> <a href="#" class="hover:text-yellow-300">
+                            Graphic Design</a> </li>
+                </ul>
+            </div>
+            <div class="md:order-2 lg:order-last">
+                <h1 class="text-orange-400 text-xl font-medium tracking-[0.030rem]"> Join Our Newsletter </h1> <br />
+                <p class="text-gray-300/80 w-3/5 leading-7 mb-5 md:w-3/4"> Join 25,000+ others and never miss out on new
+                    tips,tutorials, and more. </p> <input type="email" placeholder="Enter E-mail Here"
+                    class="py-1 px-2 placeholder-gray-400 rounded-tl-xl focus: outline-none focus:border border-orange-600 md:w-1/2 lg:w-3/5" />
+                <button class="text-white bg-orange-400 p-1 -translate-x-1 rounded-br-xl hover:bg-orange-500"> Subscribe
+                </button>
+            </div>
+        </div>
+        <div class="bg-gray-900 p-3 flex flex-col text-center pt-5 space-y-8 md:flex-row md:justify-between md:space-y-0">
+            <div
+                class="flex mx-3 justify-between space-x-20 md:flex-row text-gray-200 md:space-x-28 md:ml-20 lg:ml-24 lg:space-x-[13rem] xl:space-x-72 xl:ml-24">
+                <p>@ Copyright <strong>Company.</strong>All Rights Reserved</p>
+                <p>Designed by <span class="text-orange-400">TailwindCSS</span></p>
+            </div>
+            <div
+                class="text-white pb-4 text-center text-xl space-x-2 md:w-2/4 md:pb-0 md:pl-2 md:space-x-1 lg:pl-[171px] lg:space-x-2 xl:pl-44">
+                <a href="https://www.twitter.com"
+                    class="w-8 h-8 bg-orange-500 hover:text-orange-500 inline-block rounded-full pt-[3px] hover:bg-gray-200"><i
+                        class="fa fa-twitter"></i></a> <a href="https://www.instagram.com"
+                    class="w-8 h-8 bg-orange-500 hover:text-orange-500 inline-block rounded-full pt-[3px] hover:bg-gray-200"><i
+                        class="fa fa-instagram"></i></a> <a href="https://www.facebook.com"
+                    class="w-8 h-8 bg-orange-500 hover:text-orange-500 inline-block rounded-full pt-[3px] hover:bg-gray-200"><i
+                        class="fa fa-facebook"></i></a> <a href="https://www.google.com"
+                    class="w-8 h-8 bg-orange-500 hover:text-orange-500 inline-block rounded-full pt-[3px] hover:bg-gray-200"><i
+                        class="fa fa-google"></i></a> <a href="https://www.linkedin.com"
+                    class="w-8 h-8 bg-orange-500 hover:text-orange-500 inline-block rounded-full pt-[3px] hover:bg-gray-200"><i
+                        class="fa fa-linkedin"></i></a> </div>
+        </div>
+        </div>
+        
+    
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+        <script src="https://use.fontawesome.com/03f8a0ebd4.js"></script>
+        <script src="https://cdn.tailwindcss.com"></script> 
+
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+-->
+</body>
+
+</html>

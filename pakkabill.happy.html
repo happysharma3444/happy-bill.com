@@ -1,0 +1,869 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css">
+    
+    <title>pakkabill</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: 'Roboto',sans-serif;
+        }
+        .navbar-nav a {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 18px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .navbar-nav a:hover {
+            background-color: aqua;
+        }
+
+        .navbar-light .navbar-brand {
+            color: #fff;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .navbar-light .navbar-nav .nav-link {
+            color: #fff;
+        }
+
+        .navbar-nav {
+            text-align: center;
+        }
+
+        .nav-link {
+            padding: 0.2rem 1rem;
+        }
+
+        .w-100 {
+            height: 100vh;
+        }
+
+        @media only screen and (max-width: 767px) {
+            .navbar-nav.ml-auto {
+                background: rgba(0, 0, 0, 0.5);
+            }
+        }
+        .carousel-item{
+            height: 100vh;
+            min-height: 300px;
+            background: no-repeat center center scroll;
+            -webkit-background-size: cover;
+            background-size: cover;
+        }
+        .carousel-caption{
+            bottom: 220px;
+        }
+        .carousel-caption h5{
+            font-size: 45px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 25px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        .carousel-caption p{
+            width: 60%;
+            margin: auto;
+            font-size: 18px;
+            line-height: 1.9;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        .carousel-caption a{
+            text-transform: uppercase;
+            text-decoration: none;
+            background: #262626;
+            padding: 10px 30px;
+            display: inline-block;
+            color: #fff;
+            margin-top: 15px;
+        }
+        @media only screen and (max-width: 767px) {
+            .carousel-caption{
+                bottom: 165px;
+            }
+            .carousel-caption h5{
+                font-size: 17px;
+            }
+            .carousel-caption a{
+                padding: 10px 15px;
+                font-size: 15px;
+            }
+        }
+
+        .carousel-inner {
+            max-height: 700px;
+
+            img {
+                max-height: 300px;
+            }
+        }
+
+        .carousel-indicators img {
+            max-width: 100px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .column {
+            float: left;
+            width: 33.33%;
+            padding: 5px;
+            border: 2px solid brown;
+        }
+
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .wrapper {
+            width: 100%;
+        }
+
+        .wrapper .container {
+            padding-top: 10px;
+        }
+
+        .wrapper .container .hero-section {
+            width: 80%;
+            margin: 0px auto;
+            padding-top: 50px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+        }
+
+        .wrapper .container .hero-section .gallery {
+            width: 100%;
+            position: relative;
+        }
+
+        .wrapper .container .hero-section .gallery .image-section {
+            width: 100%;
+        }
+
+        .wrapper .container .hero-section .gallery .image-section img {
+            width: 100%;
+            height: auto;
+            border: 1px solid #eee;
+            padding: 5px;
+            display: block;
+        }
+
+        .wrapper .container .hero-section .gallery .caption {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            padding: 15px;
+            top: 0;
+            left: 0;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+            background: rgba(255, 255, 255, 0.5);
+            color: #222;
+            opacity: 0;
+            transition: opacity 0.30s;
+        }
+
+        .wrapper .container .hero-section .gallery .caption:hover {
+            opacity: 1;
+        }
+
+        .wrapper .container .hero-section .gallery .caption p {
+            font-size: 16px;
+        }
+
+        @media screen and (max-width:992px) {
+            .wrapper .container .hero-section {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media screen and (max-width:568px) {
+            .wrapper .container .hero-section {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .slider {
+            max-width: 1150px;
+            display: flex;
+        }
+
+        .slider .card {
+            flex: 1;
+            margin: 0 10px;
+            background: #fff;
+            text-align: center;
+        }
+
+        .slider .card .img {
+            height: 200px;
+            width: 100%;
+        }
+
+        .slider .card .img img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .slider .card .content {
+            padding: 10px 20px;
+        }
+
+        .card .content .title {
+            font-size: 25px;
+            font-weight: 600;
+        }
+
+        .card .content .sub-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #e74c3c;
+            line-height: 20px;
+        }
+
+        .card .content p {
+            text-align: justify;
+            margin: 10px 0;
+        }
+
+        .card .content .btn {
+            display: block;
+            text-align: left;
+            margin: 10px 0;
+        }
+
+        .card .content .btn button {
+            background: #e74c3c;
+            color: #fff;
+            border: none;
+            outline: none;
+            font-size: 17px;
+            padding: 5px 8px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .card .content .btn button:hover {
+            transform: scale(0.9);
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            color: inherit;
+            list-style-type: none;
+        }
+
+        #marquee {
+            padding: 50px 0px;
+            width: 100%;
+        }
+
+        #marquee .container {
+            overflow: hidden;
+            width: 100%;
+        }
+
+        #marquee .pic-container {
+            display: flex;
+            animation: marquee 10s infinite linear;
+        }
+
+        #marquee .pic-container .pic {
+            flex-basis: 20%;
+            flex-shrink: 0;
+        }
+
+        #marquee img {
+            width: 100%;
+            object-fit: cover;
+            border: 1px solid rgba(238, 231, 231, 0.9);
+        }
+
+        @media (max-width: 1024px) {
+            #marquee .pic-container .pic {
+                flex-basis: 25%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            #marquee .pic-container .pic {
+                flex-basis: 33.33%;
+            }
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        @media (max-width:1024px) {
+            @keyframes marquee {
+                0% {
+                    transform: translateX(0);
+                }
+
+                100% {
+                    transform: translateX(-125%);
+                }
+            }
+        }
+
+        @media (max-width:768px) {
+            @keyframes marquee {
+                0% {
+                    transform: translateX(0);
+                }
+
+                100% {
+                    transform: translateX(-186.65%);
+                }
+            }
+        }
+
+        .container {
+            max-width: 1170px;
+            margin: auto;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .footer {
+            background-color: #24262b;
+            padding: 70px 0;
+        }
+
+        .footer-col {
+            width: 25%;
+            padding: 0 15px;
+        }
+
+        .footer-col h4 {
+            font-size: 18px;
+            color: #ffffff;
+            text-transform: capitalize;
+            margin-bottom: 35px;
+            position: relative;
+        }
+
+        .footer-col h4::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            background-color: #e91e63;
+            height: 2px;
+            box-sizing: border-box;
+            width: 50px;
+        }
+
+        .footer-col ul li:not(:last-child) {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            font-size: 16px;
+            text-transform: capitalize;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 300;
+            color: #bbbbbb;
+            display: block;
+            transition: all 0.3s ease;
+        }
+
+        .footer-col ul li a:hover {
+            color: #ffffff;
+            padding-left: 8px;
+        }
+
+        .footer-col .social-links a {
+            display: inline-block;
+            height: 40px;
+            width: 40px;
+            background-color: rgba(255, 255, 255, 0.2);
+            margin: 0 10px 10px 0;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 50%;
+            color: #ffffff;
+            transition: all 0.5s ease;
+        }
+
+        .footer-col .social-links a:hover {
+            color: #24262b;
+            background-color: #ffffff;
+        }
+
+        @media (max-width: 767px) {
+            .footer-col {
+                width: 50%;
+                margin-bottom: 30px;
+            }
+        }
+
+        @media (max-width: 574px) {
+            .footer-col {
+                width: 100%;
+            }
+        }
+
+        footer {
+            background: #111;
+            height: auto;
+            width: 100vw;
+            font-family: "Open Sans";
+            padding-top: 40px;
+            color: #fff;
+        }
+
+        .footer-bottom {
+            background: #000;
+            width: 100vw;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer-bottom p {
+            font-size: 14px;
+            word-spacing: 2px;
+            text-transform: capitalize;
+        }
+
+        .footer-bottom span {
+            text-transform: uppercase;
+            opacity: .4;
+            font-weight: 200;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark">
+        <div class="logo"><img src="https://pakkabill.com/wowsa45k24/wp-content/uploads/2021/01/image001.png" width="200px"
+            alt="logo"></div>
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav  me-auto mb-2 mb-lg-0>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page"  href="pakkabill.happy.html">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Products
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Pakkabill</a></li>
+                  <li><a class="dropdown-item" href="#">Solarquote XP</a></li>
+                  <li><a class="dropdown-item" href="#">Mail X1</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Services
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Process digitalisation</a></li>
+                  <li><a class="dropdown-item" href="#">Project Delivery</a></li>
+                  <li><a class="dropdown-item" href="#">Personnel Deployment</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Company
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">About us</a></li>
+                  <li><a class="dropdown-item" href="awards.happy1.html">Awards & Recognitions</a></li>
+                  <li><a class="dropdown-item" href="team management.happy1.html">Partners</a></li>
+                  <li><a class="dropdown-item" href="#">Events</a></li>
+                  <li><a class="dropdown-item" href="#">Newsletter</a></li>
+                  <li><a class="dropdown-item" href="#">Careers</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contactus.happy1.html">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Blog.html">Success Stories</a>
+              </li>
+          </div>
+        </div>
+      </nav>
+      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://pakkabill.com/wowsa45k24/wp-content/uploads/2022/11/3D-Bus-Sol.png" class="d-block w-100" style="opacity: 0.9;" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5 class="animate__animated animate__bounceInRight" style="animation-delay: 0.5s;color: black;">A New Experience
+                </h5>
+                <p><a href="https://www.google.com" target="_blank">Get Started</a></p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://pakkabill.com/wowsa45k24/wp-content/uploads/2022/11/3D-PerDep.png" class="d-block w-100" style="opacity: 0.9;" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5 class="animate__animated animate__bounceInRight" style="animation-delay: 0.5s;color: black;">Explore the World of Invention</h5>
+                <p><a href="https://www.instagram.com" target="_blank">Lets Start</a></p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://pakkabill.com/wowsa45k24/wp-content/uploads/2022/11/3D-ProDel.png" class="d-block w-100" style="opacity: 0.9;" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5 class="animate__animated animate__bounceInRight" style="animation-delay: 0.5s;color:black;">Creative, Innovative & Intuitive</h5>
+                <p><a href="https://www.facebook.com" target="_blank">Get Started</a></p>
+            </div>
+        </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+           
+    <hr>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h2 style="text-align: center;"><b><i> COMPLETED PROJECTS</i></b></h2>
+    <div class="wrapper">
+        <div class="container">
+            <div class="hero-section">
+                <div class="gallery">
+                    <div class="image-section">
+                        <img src="https://dealpoa.com/wp-content/uploads/2016/03/consultancy_company-600x380.jpg"
+                            width="500px" alt="">
+                    </div>
+                    <div class="caption">
+                        <h2 style="color: yellow;">M/S Ag industries limited</h2>
+                        <p>Plot No. 97 to 102, Sector-6, Bawal (HR) </p>
+                    </div>
+                </div>
+                <div class="gallery">
+                    <div class="image-section">
+                        <img src="https://thecareerplanner.in/wp-content/uploads/2022/05/Admission-Consultancy.jpg"
+                            width="500px" alt="">
+                    </div>
+                    <div class="caption">
+                        <h2 style="color: yellow;">M/s Bharti Wal-Mart</h2>
+                        <p>Zirakpur, Chandigarh </p>
+                    </div>
+                </div>
+                <div class="gallery">
+                    <div class="image-section">
+                        <img src="https://dynamic.placementindia.com/blog_images/20180711145721_image1.jpg"
+                            width="500px" alt="">
+                    </div>
+                    <div class="caption">
+                        <h2 style="color: yellow;">M/s Future Warehouse</h2>
+                        <p>Village Galan, Reliance Road, Ghaziabad (UP)  </p>
+                    </div>
+                </div>
+                <div class="gallery">
+                    <div class="image-section">
+                        <img src="https://blog.hubspot.com/hubfs/Consultant%20using%20fast%20tips%20to%20win%20consulting%20clients.jpg"
+                            width="500px" alt="">
+                    </div>
+                    <div class="caption">
+                        <h2 style="color: yellow;">M/s G Max Autos Ltd.</h2>
+                        <p>Plot No - 33, Sector- 5, BAWAL, Haryana </p>
+                    </div>
+                </div>
+                <div class="gallery">
+                    <div class="image-section">
+                        <img src="https://blog.hubspot.com/hubfs/how-to-become-a-consultant.jpg"
+                            width="500px" alt="">
+                    </div>
+                    <div class="caption">
+                        <h2 style="color: yellow;">M/s Rockman Industries Ltd.</h2>
+                        <p>Plot No. 34, Sector-5, Bawal, Haryana  </p>
+                    </div>
+                </div>
+                <div class="gallery">
+                    <div class="image-section">
+                        <img src="https://dealpoa.com/wp-content/uploads/2016/03/consultancy_company-600x380.jpg"
+                            width="500px" alt="">
+                    </div>
+                    <div class="caption">
+                        <h2 style="color: yellow;">M/s. Sandarbh Foods Ltd.</h2>
+                        <p>C-11 to 13, Sector 67, Noida</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <p style="font-size: bolder; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-weight: 400;text-align: center; "><b>PKA has broadened its horizons by focusing on quality delivery, solutions approach, product development processes. PKA is comprising primarily of auto component division, caters services to esteemed clients that include Tier-1 organizations - Munjal Kiriu, Nissin Brakes, Groz Engineering Tools, Mahle Filter (three plants), Endurance Technologies Ltd., Dewas Hydroquip, Foundation Brakes India Ltd. and OEM- Escorts.</b></p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h2 style="text-align: center;"><i>THE DEPARTMENTS</i></h2><br><br>
+    <div class="flex justify-center bg-blue-500 p-4">
+        <div class="flex flex-col justify-center items-center ">
+            <div class="text-white text-3xl font-medium">Our Trusted Clients</div>
+            <div class="flex flex-col md:flex-row max-w-7xl justify-center items-center ">
+
+                <div class="overflow-hidden w-full m-4 flex justify-center bg-white rounded-lg  md:w-[33%] px-8">
+
+                    <div class="flex flex-col md:flex-row items-center justify-center  ">
+                        <div class="  items-center justify-center flex py-2">
+                            <div class="flex flex-col  items-center justify-center text-center">
+                                <img src="https://source.unsplash.com/150x150/?man,boy" alt="" class="rounded-full" />
+                                <div class="text-stone-600 font-medium m-2"> Tailblocks provides best Tailwind CSS
+                                    Components and Blocks to create an unique websites within minutes.</div>
+                                <div class="font-bold">John Doe</div>
+                                <div class="text-cyan-600 italic"><a href="#">Board Director of Tailblocks</a></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="overflow-hidden w-full m-4 flex justify-center bg-white rounded-lg  md:w-[33%] px-8">
+
+                    <div class="flex flex-col md:flex-row items-center justify-center  ">
+                        <div class="  items-center justify-center flex py-2">
+                            <div class="flex flex-col  items-center justify-center text-center">
+                                <img src="https://source.unsplash.com/150x150/?girl" alt="" class="rounded-full" />
+                                <div class="text-stone-600 font-medium m-2"> Tailblocks provides best Tailwind CSS
+                                    Components and Blocks to create an unique websites within minutes.</div>
+                                <div class="font-bold">Jessie</div>
+                                <div class="text-cyan-600 italic"><a href="https://www.google.com">MD of Tailblocks</a></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="overflow-hidden w-full m-4 flex justify-center bg-white rounded-lg  md:w-[33%] px-8">
+
+                    <div class="flex flex-col md:flex-row items-center justify-center  ">
+                        <div class="  items-center justify-center flex py-2">
+                            <div class="flex flex-col  items-center justify-center text-center">
+                                <img src="https://source.unsplash.com/150x150/?girl,woman" alt=""
+                                    class="rounded-full" />
+                                <div class="text-stone-600 font-medium m-2"> Tailblocks provides best Tailwind CSS
+                                    Components and Blocks to create an unique websites within minutes.</div>
+                                <div class="font-bold">Davina Claire</div>
+                                <div class="text-cyan-600 italic"><a href="#">Board Director of Tailblocks</a></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <section class="text-gray-600 body-font">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="flex flex-col text-center w-full mb-20">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Fun Facts</h1>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base">PKA equipped with professional team is having a very strong & efficient after sale services setup. Providing Services / Maintenance / AMC for various types and make of Pumps / Valves / Mechanical Seals. After Sale Service Is One Of The Main Objective Of Anand Engineers To Keep The Customer Happy.</p>
+          </div>
+          <div class="flex flex-wrap -m-4 text-center">
+            <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+              <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-indigo-500 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
+                  <path d="M8 17l4 4 4-4m-4-5v9"></path>
+                  <path d="M20.88 18.09A5 5 0 0018 9h-1.26A8 8 0 103 16.29"></path>
+                </svg>
+                <h2 class="title-font font-medium text-3xl text-gray-900">2.7K</h2>
+                <p class="leading-relaxed">Downloads</p>
+              </div>
+            </div>
+            <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+              <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-indigo-500 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
+                  <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
+                </svg>
+                <h2 class="title-font font-medium text-3xl text-gray-900">1.3K</h2>
+                <p class="leading-relaxed">Users</p>
+              </div>
+            </div>
+            <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+              <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-indigo-500 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
+                  <path d="M3 18v-6a9 9 0 0118 0v6"></path>
+                  <path d="M21 19a2 2 0 01-2 2h-1a2 2 0 01-2-2v-3a2 2 0 012-2h3zM3 19a2 2 0 002 2h1a2 2 0 002-2v-3a2 2 0 00-2-2H3z"></path>
+                </svg>
+                <h2 class="title-font font-medium text-3xl text-gray-900">74</h2>
+                <p class="leading-relaxed">Files</p>
+              </div>
+            </div>
+            <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+              <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-indigo-500 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+                <h2 class="title-font font-medium text-3xl text-gray-900">46</h2>
+                <p class="leading-relaxed">Places</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    <h2 style="text-align: center;"><b><i> PRODUCTS</i></b></h2>
+    <section id="marquee">
+        <div class="container">
+            <div class="pic-container">
+                <div class="pic">
+                    <img src="http://demo1.ibsb.xyz/Anand_engineering/images/Product/product01.jpg"
+                        alt="">
+                </div>
+                <div class="pic">
+                    <img src="http://demo1.ibsb.xyz/Anand_engineering/images/Product/product02.jpg"
+                        alt="">
+                </div>
+                <div class="pic">
+                    <img src="http://demo1.ibsb.xyz/Anand_engineering/images/Product/product03.jpg"
+                        alt="">
+                </div>
+                <div class="pic">
+                    <img src="http://demo1.ibsb.xyz/Anand_engineering/images/Product/product04.jpg"
+                        alt="">
+                </div>
+                <div class="pic">
+                    <img src="http://demo1.ibsb.xyz/Anand_engineering/images/Product/product05.jpg"
+                        alt="">
+                </div>
+                <div class="pic">
+                    <img src="http://demo1.ibsb.xyz/Anand_engineering/images/Product/product06.jpg"
+                        alt="">
+                </div>
+                <div class="pic">
+                    <img src="http://demo1.ibsb.xyz/Anand_engineering/images/Product/product07.jpg" alt="">
+                </div>
+                <div class="pic">
+                    <img src="http://demo1.ibsb.xyz/Anand_engineering/images/Product/product08.jpg"
+                        alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>COMPANY</h4>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        <li><a href="#">affiliate program</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>EMAIL US</h4>
+                    <ul>
+                        <li><a href="https://www.gmail.com">info@aew.in</a></li>
+                        <li><a href="https://www.gmail.com">@tvstudio.usa</a></li>
+                        <li><a href="https://www.gmail.com">tv.wb3@co.in</a></li>
+                        <li><a href="https://www.gmail.com">dc@entertainment.in</a></li>
+                        <li><a href="https://www.gmail.com">@series.co.in</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>CONTACT US</h4>
+                    <ul>
+                        <li><a href="#">+22233758</a></li>
+                        <li><a href="#">+677773373</a></li>
+                        <li><a href="#">+366672883</a></li>
+                        <li><a href="#">+333464744</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>FOLLOW US</h4>
+                    <div class="social-links"></div>
+                    <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com "><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </footer>
+    <footer>
+        <div class="footer-bottom">
+            <p>copyright &copy;2022 all rights reserved by <span>PKA CONSULTANCY PVT.LTD.</span></p>
+        </div>
+    </footer>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://use.fontawesome.com/03f8a0ebd4.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
